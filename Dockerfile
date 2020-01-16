@@ -20,3 +20,6 @@ RUN make
 RUN make install
 WORKDIR third_party/protobuf
 RUN make && make install
+RUN mkdir /cpp-dev
+WORKDIR /cpp-dev
+
