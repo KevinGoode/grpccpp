@@ -13,6 +13,14 @@ docker run -i -t grpc_cpp:latest /bin/bash
 ### Building inside the container
 bash> cd /src/github.com/grpc/examples/cpp/helloworld/  
 bash> make  
-### Building src inside the container 
-TODO  
+### Building local src inside the container 
+Recommended approach is to run the container mounting the local src directory then  
+execute a make command  on this code.  
+NB May also need to copy over dependencies from container. Use ldd inside container to find out dependencies and then
+copy them out of the container and run code pointing to local libraries.  
+  
+For an example of this process, cd into the example directory and execute ./build.sh  
+ 
+
+  
 
